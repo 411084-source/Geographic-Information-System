@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>地區資訊查詢</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <h1>地區資訊查詢</h1>
+      <p>輸入一個地區或國家名稱，系統將搜尋相關的地理、歷史與社會現狀資訊。</p>
+    </header>
+
+    <section class="search-panel">
+      <label for="queryInput">地區 / 國家名稱</label>
+      <div class="search-row">
+        <input id="queryInput" type="text" placeholder="例如：日本、台灣、尼羅河流域" />
+        <button id="searchButton">搜尋</button>
+      </div>
+      <p class="hint">資料來源：Wikipedia</p>
+    </section>
+
+    <section id="resultSection" class="result hidden">
+      <div class="result-header">
+        <h2 id="resultTitle"></h2>
+        <p id="resultDescription"></p>
+      </div>
+      <div id="resultContent" class="result-content"></div>
+    </section>
+
+    <section id="messageSection" class="message hidden"></section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

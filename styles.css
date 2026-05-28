@@ -1,0 +1,157 @@
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --primary: #1a73e8;
+  --primary-strong: #0e5ec4;
+  --text: #1f2937;
+  --muted: #54616f;
+  --border: #d7e0eb;
+  --shadow: 0 20px 45px rgba(30, 47, 90, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #eef4fb 0%, #f9fcff 100%);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.search-panel {
+  margin-top: 28px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.search-panel label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.search-row input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+.search-row button {
+  padding: 0 20px;
+  border: none;
+  border-radius: 14px;
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-row button:hover {
+  background: var(--primary-strong);
+}
+
+.hint {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.result,
+.message {
+  margin-top: 26px;
+  padding: 26px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.result-header h2 {
+  margin: 0 0 8px;
+  font-size: 1.7rem;
+}
+
+.result-header p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.result-content {
+  margin-top: 20px;
+}
+
+.section-block {
+  margin-bottom: 22px;
+}
+
+.section-block h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: var(--primary-strong);
+}
+
+.section-block p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.85;
+  white-space: pre-wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  color: var(--text);
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    padding: 22px 16px 32px;
+  }
+
+  .search-row {
+    grid-template-columns: 1fr;
+  }
+}
